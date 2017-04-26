@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace parsingCalculator
@@ -29,8 +30,14 @@ namespace parsingCalculator
                 }
 
             }
-            Console.WriteLine(list.Count);
-            Console.ReadLine();
+            int listlength = list.Count;
+            var stripped = Regex.Replace(problem, "[^0-9]", "");
+            int strippedInt = Int32.Parse(stripped); //converts the stripped variable to an integer value
+
+
+            int numCount;
+            int operCount;
+
 
         }
     }
